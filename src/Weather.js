@@ -19,13 +19,13 @@ export default function Weather(props) {
       feelsLike: response.data.main.feels_like,
       city: response.data.name,
       descriptionAlt: response.data.weather[1].main,
-      iconUrl: "http://openweathermap.org/img/w/03d.png",
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date(response.data.dt * 1000),
     });
   }
 
   function search() {
-    const apiKey = "18a1ec75f53ba1a0a864da5b6480a3f8";
+    const apiKey = "bce6e660398b266f6fc70ee8855a9bca";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${citySearch}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }

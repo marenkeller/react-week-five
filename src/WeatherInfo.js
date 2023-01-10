@@ -8,10 +8,10 @@ export default function WeatherInfo(props) {
         <div className="col-8">
           <h1>{props.city}</h1>
           <img src="{props.iconUrl}" alt="{props.descriptionAlt}" />
-          <span> {Math.round(props.temperature)}</span>
-          <div>Feels like {Math.round(props.feelsLike)}◦C</div>
+          <span> {Math.round(props.temperature)} °C</span>
+          <div>Feels like {Math.round(props.feelsLike)}°C</div>
           <div>
-            ↑{Math.round(props.minTemp)}◦C | ↓ {Math.round(props.maxTemp)}◦C
+            ↑{Math.round(props.minTemp)}°C | ↓ {Math.round(props.maxTemp)}°C
           </div>
           <div className="weatherDescription">{props.description}</div>
         </div>
