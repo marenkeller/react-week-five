@@ -6,19 +6,24 @@ export default function WeatherInfo(props) {
     <div className="WeatherInfo">
       <div className="row">
         <div className="col-8">
-          <h1>{props.city}</h1>
-          <img src="{props.iconUrl}" alt="{props.descriptionAlt}" />
-          <span> {Math.round(props.temperature)} °C</span>
-          <div>Feels like {Math.round(props.feelsLike)}°C</div>
+          <h1>{props.data.city}</h1>
+          <img src={props.data.iconUrl} alt={props.data.descriptionAlt} />
+          <span>
+            {" "}
+            {Math.round(props.data.temperature)} <a href="/">°C</a>⎮°F{" "}
+          </span>
+
+          <div>Feels like {Math.round(props.data.feelsLike)}°C</div>
           <div>
-            ↑{Math.round(props.minTemp)}°C | ↓ {Math.round(props.maxTemp)}°C
+            ↑{Math.round(props.data.minTemp)}°C | ↓{" "}
+            {Math.round(props.data.maxTemp)}°C
           </div>
-          <div className="weatherDescription">{props.description}</div>
+          <div className="weatherDescription">{props.data.description}</div>
         </div>
         <div className="col-4">
           <ul className="weatherDetails">
-            <li>Humidity: {Math.round(props.humidity)} %</li>
-            <li>Wind: {Math.round(props.wind)} km/t</li>
+            <li>Humidity: {Math.round(props.data.humidity)} %</li>
+            <li>Wind: {Math.round(props.data.wind)} km/t</li>
             <li>
               <FormattedDate date={props.data.date} />
             </li>
