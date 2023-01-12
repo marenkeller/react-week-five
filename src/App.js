@@ -6,7 +6,17 @@ function App() {
     <div className="App">
       <div className="container">
         <Weather defaultCity="Oslo" />
-        <footer> Coded by Maren</footer>
+        <footer>
+          {" "}
+          Coded by Maren Keller. See code at{" "}
+          <a
+            href="https://github.com/marenkeller/react-week-five"
+            target="_blank"
+          >
+            {" "}
+            GitHub{" "}
+          </a>
+        </footer>
       </div>
     </div>
   );
