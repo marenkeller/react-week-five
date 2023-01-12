@@ -20,7 +20,7 @@ export default function WeatherInfo(props) {
             <li>Humidity: {Math.round(props.humidity)} %</li>
             <li>Wind: {Math.round(props.wind)} km/t</li>
             <li>
-              <FormattedDate date={props.date} />
+              <FormattedDate date={props.data.date} />
             </li>
           </ul>
         </div>
