@@ -1,4 +1,20 @@
 .WeatherInfo h1 {
   text-transform: uppercase;
   font-size: 46px;
+  font-weight: 300;
+}
+
+.WeatherInfo .minMaxtemp {
+  color: rgb(106, 103, 103);
+}
+
+.WeatherInfo .weatherDescription {
+  color: rgb(106, 103, 103);
+  text-transform: capitalize;
+}
+
+.WeatherInfo img {
+  width: 112px;
+  position: relative;
+  top: 9px;
 }

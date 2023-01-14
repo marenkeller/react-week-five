@@ -1,7 +1,17 @@
-span.tempMain {
-  font-size: 42px;
+span.tempMainCelcius,
+span.tempMainFahrenheit {
+  font-size: 46px;
+  position: relative;
+  font-weight: 300;
+  top: 20px;
 }
 
 div.col-6 {
   padding: 15px;
+}
+
+.CelcFahr {
+  color: red;
+  font-size: 18px;
+  text-decoration: none;
 }
