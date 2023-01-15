@@ -12,6 +12,7 @@ function App() {
           <a
             href="https://github.com/marenkeller/react-week-five"
             target="_blank"
+            rel="noreferrer"
           >
             {" "}
             GitHub{" "}
