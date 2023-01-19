@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import ChangeTemperature from "./ChangeTemperature";
 import "./WeatherInfo.css";
+import Forecast from "./Forecast";
 
 export default function WeatherInfo(props) {
   return (
@@ -31,6 +32,8 @@ export default function WeatherInfo(props) {
             <li>Wind: {Math.round(props.data.wind)} km/t</li>
           </ul>
         </div>
+        <hr />
+        <Forecast />
       </div>
     </div>
   );
