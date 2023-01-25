@@ -13,7 +13,7 @@ export default function Forecast(props) {
 
   if (loaded) {
     return (
-      <div className="WeatherForecastrow">
+      <div className="WeatherForecastRow">
         <div className="col-2">
           <div>Mon</div>
           <div>☃️</div>
@@ -23,10 +23,13 @@ export default function Forecast(props) {
       </div>
     );
   } else {
-    let apiKey = "bce6e660398b266f6fc70ee8855a9bca";
+    let apiKey = "2a2eaa51d996796495bf456e5b58adf4";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=&lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;
+
     axios.get(apiUrl).then(handleResponse);
+
+    return null;
   }
 }
