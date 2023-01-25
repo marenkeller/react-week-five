@@ -1,0 +1,13 @@
+div.col-2 {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.ForecastTempMax {
+  color: black;
+}
+
+.ForecastTempMin {
+  color: darkgray;
+}
