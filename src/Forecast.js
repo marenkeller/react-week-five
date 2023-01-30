@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Forecast.css";
+import WeeklyForecast from "./WeeklyForecast";
 
 export default function Forecast({ lon, lat }) {
   let [loaded, setLoaded] = useState(false);
@@ -24,16 +25,7 @@ export default function Forecast({ lon, lat }) {
   }, [lon, lat]);
 
   if (loaded) {
-    return (
-      <div className="WeatherForecastRow">
-        <div className="col-2">
-          <div>Mon</div>
-          <div>☃️</div>
-          <span className="ForecastTempMax"> {forecast[0].temp.max}°</span>{" "}
-          <span className="ForecastTempMin">{forecast[0].temp.min}°</span>
-        </div>
-      </div>
-    );
+    return <WeeklyForecast />;
   } else {
     return <div></div>;
   }
