@@ -23,7 +23,6 @@ export default function Weather(props) {
       iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date(response.data.dt * 1000),
     });
-    console.log("vi kom hit", weatherData);
   }
 
   function handleSubmit(event) {
@@ -35,7 +34,7 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apiKey = "3fdc8cfbf2d6fa0116c9ae92d3df4f79";
+    const apiKey = "5201594abea9f3e38b70e65b11a80c24";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${citySearch}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
