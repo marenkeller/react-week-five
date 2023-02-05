@@ -16,12 +16,8 @@ export default function WeatherForecast(props) {
     return (
       <div className="WeatherForecast">
         <div className="row">
-          <div className="col-2">
+          <div className="col">
             <WeeklyForecast data={forecast[0]} />
-            <WeeklyForecast data={forecast[1]} />
-            <WeeklyForecast data={forecast[2]} />
-            <WeeklyForecast data={forecast[3]} />
-            <WeeklyForecast data={forecast[4]} />
           </div>
         </div>
       </div>

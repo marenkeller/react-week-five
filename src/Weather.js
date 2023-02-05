@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-import Forecast from "./Forecast";
 import WeatherInfo from "./WeatherInfo";
+import WeeklyForecast from "./WeeklyForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -66,7 +66,7 @@ export default function Weather(props) {
         {weatherData.coordinates &&
           weatherData.coordinates.lon &&
           weatherData.coordinates.lat && (
-            <Forecast
+            <WeeklyForecast
               lon={weatherData.coordinates.lon}
               lat={weatherData.coordinates.lat}
             />
