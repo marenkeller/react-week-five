@@ -2,7 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import ChangeTemperature from "./ChangeTemperature";
 import "./WeatherInfo.css";
-import Forecast from "./Forecast";
+import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherInfo(props) {
   return (
@@ -33,7 +33,7 @@ export default function WeatherInfo(props) {
           </ul>
         </div>
         <hr />
-        <Forecast />
+        <WeatherForecast data={props.data} />
       </div>
     </div>
   );

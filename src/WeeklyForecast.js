@@ -7,8 +7,6 @@ export default function WeeklyForecast(props) {
       <div className="row">
         <div className="col">
           <div>Mon</div>
-          <span className="ForecastTempMax"> {forecast[0].temp.max}°</span>{" "}
-          <span className="ForecastTempMin">{forecast[0].temp.min}°</span>
         </div>
       </div>
     </div>
