@@ -3,11 +3,11 @@ import React from "react";
 export default function WeeklyForecast(props) {
   function maxTemp() {
     let maxTemp = Math.round(props.data.temp.max);
-    return `${maxTemp}°`;
+    return `${maxTemp}°C`;
   }
   function minTemp() {
     let minTemp = Math.round(props.data.temp.min);
-    return `${minTemp}°`;
+    return `${minTemp}°C`;
   }
 
   function day() {
