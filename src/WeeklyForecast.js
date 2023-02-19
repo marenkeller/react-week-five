@@ -1,4 +1,5 @@
 import React from "react";
+import Weather from "./Weather";
 
 export default function WeeklyForecast(props) {
   function maxTemp() {
@@ -25,8 +26,9 @@ export default function WeeklyForecast(props) {
         <div className="row">
           <div className="col">
             <div className="WeeklyForecast-Day">{day()}</div>
-            <span className="ForecastTempMax">{maxTemp()}</span>{" "}
-            <span className="ForecastTempMin">{minTemp()}</span>
+            <Weather icon={props.data.weather[0].iconUrl} />
+            <div className="ForecastTempMax">{maxTemp()}</div>{" "}
+            <div className="ForecastTempMin">{minTemp()}</div>
           </div>
         </div>
       </div>

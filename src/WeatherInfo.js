@@ -16,6 +16,7 @@ export default function WeatherInfo(props) {
           <div className="feelsLIke">
             Feels like {Math.round(props.data.feelsLike)}°C
           </div>
+
           <div className="minMaxtemp">
             ↑ {Math.round(props.data.minTemp)}°C | ↓{" "}
             {Math.round(props.data.maxTemp)}°C
