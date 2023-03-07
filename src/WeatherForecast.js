@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./WeatherForecast.css";
 import axios from "axios";
 import WeeklyForecast from "./WeeklyForecast";
+import Weather from "./Weather";
 
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
@@ -21,6 +22,13 @@ export default function WeatherForecast(props) {
               return (
                 <div className="col" key={index}>
                   <WeeklyForecast data={dailyForecast} />
+                  <img
+                    className="forecastIcons"
+                    src="https://openweathermap.org/img/wn/${response.weather[0].icon
+         }@2x.png"
+                    alt="icon"
+                    size={36}
+                  />
                 </div>
               );
             }

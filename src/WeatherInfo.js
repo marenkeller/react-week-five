@@ -10,7 +10,11 @@ export default function WeatherInfo(props) {
       <div className="row">
         <div className="col-6">
           <h1>{props.data.city}</h1>
-          <img src={props.data.iconUrl} alt={props.data.descriptionAlt} />
+          <img
+            className="mainIcon"
+            src={props.data.iconUrl}
+            alt={props.data.descriptionAlt}
+          />
           <ChangeTemperature celcius={props.data.temperature} />
 
           <div className="feelsLIke">
@@ -29,8 +33,10 @@ export default function WeatherInfo(props) {
               <FormattedDate date={props.data.date} />
             </li>
             <br />
-            <li>Humidity: {Math.round(props.data.humidity)} %</li>
-            <li>Wind: {Math.round(props.data.wind)} km/t</li>
+            <li className="humidity">
+              Humidity: {Math.round(props.data.humidity)} %
+            </li>
+            <li className="wind">Wind: {Math.round(props.data.wind)} km/h</li>
           </ul>
         </div>
         <hr />

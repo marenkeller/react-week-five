@@ -6,8 +6,10 @@ div.col-2 {
 
 .ForecastTempMax {
   color: black;
+  font-weight: 300;
 }
 
 .ForecastTempMin {
   color: darkgray;
+  font-weight: 300;
 }

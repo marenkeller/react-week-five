@@ -18,7 +18,7 @@ export default function ChangeTemperature(props) {
     return (
       <span>
         <span className="tempMainCelcius"> {Math.round(props.celcius)}</span>
-        <span className="unit"> °C</span>⎮{" "}
+        <span className="unit">°C</span>
         <span>
           {" "}
           <a href="/" onClick={ShowFahrenheit}>
@@ -31,15 +31,12 @@ export default function ChangeTemperature(props) {
     let fahrenheit = (props.celcius * 9) / 5 + 32;
     return (
       <span>
-        <span className="tempMainFahrenheit">
-          {Math.round(fahrenheit)}{" "}
-          <span>
-            {" "}
-            <a href="/" onClick={ShowCelcius}>
-              °C
-            </a>
-          </span>
-          ⎮ <span className="unit"> °F</span>
+        <span className="tempMainFahrenheit">{Math.round(fahrenheit)}</span>
+        <span className="unit">°F</span>
+        <span>
+          <a href="/" onClick={ShowCelcius}>
+            °C
+          </a>
         </span>
       </span>
     );

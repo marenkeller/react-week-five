@@ -1,3 +1,16 @@
-x div.col-6 {
+div.col-6 {
   padding: 15px;
+}
+
+span.tempMainCelcius,
+span.tempMainFahrenheit {
+  position: relative;
+  right: -52px;
+  top: 26px;
+  font-size: 56px;
+}
+span.unit,
+a {
+  position: relative;
+  right: -70px;
 }
