@@ -1,4 +1,5 @@
 import React from "react";
+
 export default function WeeklyForecast(props) {
   function maxTemp() {
     let maxTemp = Math.round(props.data.temp.max);
@@ -18,13 +19,19 @@ export default function WeeklyForecast(props) {
     return days[day];
   }
 
+  function icon() {
+    let icon = `http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`;
+
+    return `${icon}`;
+  }
+
   return (
     <div>
       <div className="WeatherForecast">
         <div className="row">
           <div className="col">
             <div className="WeeklyForecast-Day">{day()}</div>
-
+            <img src={icon()} width={60} />
             <div className="ForecastTempMax">{maxTemp()}</div>
             <div className="ForecastTempMin">{minTemp()}</div>
           </div>
