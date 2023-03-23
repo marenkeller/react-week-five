@@ -1,5 +1,4 @@
 import React from "react";
-import "./WeeklyForecast";
 
 export default function WeeklyForecast(props) {
   function maxTemp() {
@@ -30,11 +29,11 @@ export default function WeeklyForecast(props) {
     <div>
       <div className="WeatherForecast">
         <div className="row">
-          <div className="col-6">
+          <div className="col">
             <div className="WeeklyForecast-Day">{day()}</div>
-            <img src={icon()} width={60} />
-            <div className="ForecastTempMax">{maxTemp()}</div>
-            <div className="ForecastTempMin">{minTemp()}</div>
+            <img className="forecastIcons" src={icon()} width={60} />
+            <div className="ForecastTempMax">↑ {maxTemp()}</div>
+            <div className="ForecastTempMin">↓ {minTemp()}</div>
           </div>
         </div>
       </div>

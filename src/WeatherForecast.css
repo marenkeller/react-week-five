@@ -5,11 +5,15 @@ div.col-2 {
 }
 
 .ForecastTempMax {
-  color: black;
   font-weight: 300;
+  color: white;
 }
 
 .ForecastTempMin {
-  color: darkgray;
-  font-weight: 300;
+  color: rgb(217, 217, 217);
+  font-weight: 200;
+}
+
+div.WeatherForecast {
+  color: white;
 }

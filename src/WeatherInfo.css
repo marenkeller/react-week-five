@@ -2,8 +2,9 @@
   text-transform: uppercase;
   font-size: 50px;
   padding-top: 5px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 2.5rem;
+  color: white;
 }
 
 div.col-6 {
@@ -18,15 +19,17 @@ img.mainIco {
 
 .WeatherInfo div.tempMainCelcius {
   font-size: 68px;
-  font-weight: 400;
+  font-weight: 300;
   text-align: center;
+  color: white;
 }
 
 .WeatherInfo .tempMainDegreeSign {
   font-size: 25px;
-  font-weight: 400;
+  font-weight: 300;
   padding-bottom: 15px;
   top: -30px;
+  color: white;
 }
 ul {
   margin-left: 20px;
@@ -35,8 +38,8 @@ ul {
 
 li.humidity,
 li.wind {
-  font-weight: 300;
-  color: rgb(106, 103, 103);
+  font-weight: 200;
+  color: rgb(217, 217, 217);
 }
 
 .WeatherInfo img.mainIcon {
