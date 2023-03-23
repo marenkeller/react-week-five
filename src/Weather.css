@@ -10,11 +10,17 @@
 
 .Weather form {
   border-radius: 4px;
+  max-width: 450px;
+  padding: 5px;
 }
 
 .Weather ul {
   list-style: none;
   display: block;
-  margin: 50px 40px 0 0;
+  margin: 50px 80px 0 0;
   font-weight: 300;
+}
+
+.Weather input.btn.btn-primary {
+  width: 150px;
 }

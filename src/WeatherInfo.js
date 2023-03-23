@@ -1,6 +1,5 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
-import ChangeTemperature from "./ChangeTemperature";
 import "./WeatherInfo.css";
 import WeatherForecast from "./WeatherForecast";
 
@@ -15,28 +14,30 @@ export default function WeatherInfo(props) {
             src={props.data.iconUrl}
             alt={props.data.descriptionAlt}
           />
-          <ChangeTemperature celcius={props.data.temperature} />
-
-          <div className="feelsLIke">
-            Feels like {Math.round(props.data.feelsLike)}°C
+          <div className="tempMainCelcius">
+            {Math.round(props.data.temperature)}
+            <span className="tempMainDegreeSign">°C</span>{" "}
           </div>
-
-          <div className="minMaxtemp">
-            ↑ {Math.round(props.data.minTemp)}°C | ↓{" "}
-            {Math.round(props.data.maxTemp)}°C
-          </div>
-          <div className="weatherDescription">{props.data.descriptionAlt}</div>
         </div>
         <div className="col-6">
+          <FormattedDate date={props.data.date} />
+
           <ul className="weatherDetails">
-            <li>
-              <FormattedDate date={props.data.date} />
+            <li className="feelsLIke">
+              Feels like {Math.round(props.data.feelsLike)}°C
             </li>
+            <li className="minMaxtemp">
+              ↑ {Math.round(props.data.minTemp)}°C | ↓{" "}
+              {Math.round(props.data.maxTemp)}°C{" "}
+            </li>
+            <li className="weatherDescription">{props.data.descriptionAlt}</li>
             <br />
             <li className="humidity">
               Humidity: {Math.round(props.data.humidity)} %
             </li>
-            <li className="wind">Wind: {Math.round(props.data.wind)} km/h</li>
+            <li className="humidity">
+              Wind: {Math.round(props.data.wind)} km/h
+            </li>
           </ul>
         </div>
         <hr />
