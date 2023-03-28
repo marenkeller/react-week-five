@@ -31,7 +31,8 @@ export default function WeeklyForecast(props) {
         <div className="row">
           <div className="col">
             <div className="WeeklyForecast-Day">{day()}</div>
-            <img className="forecastIcons" src={icon()} width={60} />
+
+            <img alt="icon" className="forecastIcons" src={icon()} width={60} />
             <div className="ForecastTempMax">↑ {maxTemp()}</div>
             <div className="ForecastTempMin">↓ {minTemp()}</div>
           </div>
